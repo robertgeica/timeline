@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 200px;
     position: relative; /* Align the cutout central */
     padding: 2em 1em;
-    background-image: url(../img/banner2.gif);
+    background-image: url(img/banner2.gif);
 }
 
 .header-text {
