@@ -1,0 +1,215 @@
+body {
+    color: #768390;
+    background: #FFF;
+    font-family: Helvetica, sans-serif;
+    padding: 0;
+    -webkit-font-smoothing: antialised;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #3D4351;
+    margin-top: 0;
+}
+
+
+/* HEADER SECTION */
+.header-main {
+    height: 200px;
+    position: relative; /* Align the cutout central */
+    padding: 2em 1em;
+    background-image: url(../img/banner2.gif);
+}
+
+.header-text {
+    width: 50%;
+    padding: 10px 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen; /* This makes the cutout text possible */
+    background-color: rgba(215, 218, 224, .8);
+    color: black;
+    font-size: 4vw; /* Responsive font size */
+    font-weight: 700;
+    text-align: center; /* Center text */
+    /* margin: 0 auto; Center text container */
+}
+/* END HEADER SECTION */
+
+
+/* SUB-HEADER */
+.subheader-text {
+    text-align: center;
+    margin-bottom: 3em;
+    padding: 3em 0;
+    border-bottom: 1px solid #E4EAEC;
+}
+
+.subheader-text p {
+    margin: 0 auto;
+}
+/* END SUBHEADER */
+
+
+/* TIMELINE */
+.timeline {
+    line-height: 1.4em;
+    list-style: none;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.timeline h1, .timeline h2, .timeline h3, .timeline h4, .timeline h5, .timeline h6 {
+    line-height: inherit;
+}
+
+.timeline-item {
+    padding-left: 3em;
+    position: relative;
+}
+
+.timeline-date {
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+ /* .timeline-marker {
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px; 
+}  */
+
+/* blue bullet */
+.timeline-marker:before {
+    content: "";
+    /* display: block; */
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    left: -2px;
+    top: 2px;
+    background: #0B60E8;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.timeline-marker:after {
+    content: "";
+    /* display: block; */
+    position: absolute;
+    width: 4px;
+    top: 24px;
+    bottom: 0;
+    left: 6px;
+    background: #CCD5DB;
+}
+
+/* .timeline-item:last-child .timeline-marker:after {
+    content: none;
+} */
+
+.timeline-item:not(.week-break):hover .timeline-marker:before {
+    background: transparent;
+    border: 3px solid #0B60E8;
+}
+
+.timeline-content {
+    padding-bottom: 40px;
+}
+
+.timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* Collapse button for Archieved Timelines */
+.collapse-btn {
+    width: 100%;
+    padding: 1em;
+    font-size: 0.9em;
+    font-weight: 700;
+    background-color: rgba(212, 212, 212, 0.3);
+    color: black;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.active, .collapse-btn:hover {
+    background-color: rgba(212, 212, 212, 0.7);
+}
+
+.collapse-btn:after {
+    content: '\002B';
+    font-size: 1.2em;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: '\2212';
+}
+
+.collapse-content {
+    padding: 0 1em;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.label {
+    border-radius: 10%;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+
+    background: rgb(128, 128, 128);
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    float: right;
+}
+
+.label:hover {
+    background: rgb(128, 128, 128, 0.3);
+    color: black;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+ 
+
+
+
+    .timeline-archive .timeline-date,
+    .timeline-archive .timeline-marker,
+    .timeline-archive .timeline-content{
+        display: table-cell;
+    }
+
+    .timeline-archive .timeline-marker {
+        position: relative;
+    }
+
+    .timeline-archive .timeline-content {
+        padding-left: 30px;
+    }
+
+    .timeline-archive .timeline-date {
+        padding-right: 30px;
+    }
+} 
